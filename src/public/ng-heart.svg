@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Background -->
+  <rect width="100" height="100" rx="20" fill="#fff0f5"></rect>
+
+  <!-- N Letter -->
+  <text x="25" y="60" font-size="40" font-family="Arial" font-weight="bold" fill="#ff4d88">
+    N
+  </text>
+
+  <!-- Heart -->
+  <text x="45" y="52" font-size="20">
+    ❤
+  </text>
+
+  <!-- G Letter -->
+  <text x="60" y="60" font-size="40" font-family="Arial" font-weight="bold" fill="#ff4d88">
+    G
+  </text>
+</svg>

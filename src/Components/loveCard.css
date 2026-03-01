@@ -1,0 +1,138 @@
+/* RESET */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* PAGE */
+.page {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffe6f0, #fff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* FLOATING HEARTS */
+.hearts::before {
+  content: "❤️ 💖 💕 💗 💓";
+  position: absolute;
+  width: 100%;
+  font-size: 28px;
+  opacity: 0.15;
+  animation: floatHearts 18s linear infinite;
+}
+
+@keyframes floatHearts {
+  from { transform: translateY(100vh); }
+  to { transform: translateY(-10vh); }
+}
+
+/* CONTENT */
+.content-wrapper {
+  text-align: center;
+  padding: 40px;
+}
+
+/* TITLE */
+.title {
+  font-size: 38px;
+  background: linear-gradient(45deg,#ff4d88,#ff8fab);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* HEARTBEAT */
+.heartbeat {
+  animation: beat 1.5s infinite;
+}
+
+@keyframes beat {
+  0%,100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* CARD */
+.love-card {
+  margin-top: 40px;
+  width: 420px;
+  height: 260px;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.9s ease;
+  transform-style: preserve-3d;
+}
+
+.love-card.open .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* SIDES */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  padding: 20px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+/* HOVER GLOW */
+.love-card:hover {
+  transform: translateY(-6px);
+}
+
+/* FRONT */
+.card-front {
+  background: #ff4d88;
+  color: white;
+}
+
+/* BACK */
+.card-back {
+  background: white;
+  transform: rotateY(180deg);
+  color: #444;
+}
+
+.message {
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+/* LOVE CHARGE BAR */
+.charge {
+  width: 200px;
+  height: 8px;
+  background: #eee;
+  border-radius: 10px;
+  margin: 10px 0 20px;
+  overflow: hidden;
+}
+
+.level {
+  height: 100%;
+  background: #ff4d88;
+  animation: charge 2s forwards;
+}
+
+@keyframes charge {
+  from { width: 0; }
+  to { width: 100%; }
+}
