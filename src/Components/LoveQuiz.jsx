@@ -5,10 +5,9 @@ export default function LoveCard() {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState("");
 
-  const message =
-    "Hey, are you an electrical engineer? Because your presence flows through my heart like a gentle current I never want to lose ⚡❤️";
-
-  // typing animation
+const message =
+  "You didn’t just bring a spark into my life; you became the quiet energy that makes my every heartbeat feel meaningful ⚡ I LOVE YOU ❤️"; 
+ 
   useEffect(() => {
     if (!open) return;
 
